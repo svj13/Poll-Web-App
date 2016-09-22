@@ -1,0 +1,27 @@
+<h1><span>{{poll.Title}}</span></h1>
+
+<h2>{{poll.Body}}</h2>
+
+
+<form >
+    <table class="table">
+        <tr ng-repeat="option in options">
+            <td>
+                <input ng-model="$parent.selected" type='radio' value="{{option.Id}}" name='options'>{{option.Body}}
+            </td>
+        </tr>
+    </table>
+    <button type="submit" class="btn btn-primary" ng-click="vote()">Vote</button>
+</form>
+ 
+     
+
+
+<form method="get" action="#/polls/" onsubmit="return confirm('You have not ' +
+'cast your vote! Are you sure you wish to return to the Polls page?');">
+    <button type="submit" class="btn btn-default">Back</button>
+</form>
+
+
+
+

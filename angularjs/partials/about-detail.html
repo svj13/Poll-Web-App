@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<h1>Poll World About Page</h1>
+
+<h2>What this website does:</h2>
+
+
+<p><b>About Tab:</b><br> The about tab contains all of the information of the 
+    website, including what it does, design decisions chosen, 
+    and existing bugs.</p>
+
+
+<p><b>Polls Tab:</b><br> The Polls tab contains all of the available polls
+    a user can take. When a poll is selected, it will take the user to the
+    page where they can select an option and vote. 
+
+</p>
+
+<p><b>Admin View Tab:</b><br> The Admin View tab allows the user to view the
+    polls in an administrative way, where they can view the number of votes
+    for each poll and reset the voting polls
+
+</p>
+
+
+<h2>Extra Features:</h2>
+<p> - I implemented a confirm pop up box. If you click "back" without voting, 
+    it will ask if you are sure you want to proceed. <br>
+    - I implemented another pop up box that would trigger when the user had
+    voted. It thanks them for voting and then re-directs them to the Polls page<br>
+    - I implemented a pop up box that would trigger if you tried to vote without
+    selecting an option<br>
+    - I implemented a confirm pop up box for if you wanted to delete the votes
+    of a poll in the admin view<br>
+
+<h2>Design Issues:</h2>
+<p> - I found it very hard to implement the selection for an option of
+    a poll. It took a while for me to figure out how to make it exclusively have
+    only one answer selected, and how to make it so the option wouldn't
+    disappear when you clicked on it. I had to play around a lot with the radio 
+    buttons in order to make it work as expected. <br>
+    - I chose to make admin view in a similar design to the Polls tab, where
+    you select the poll and the coresponding information for that poll
+    will show up. I tried to implement the admin view so all of the poll
+    statistics showed up on one page, but this became rather complex when
+    trying to fetch certain information<br>
+    - I chose Bootstrap for my design. I used some of the bootstrap 
+    implementations for formating my tables, but i didn't explore too much 
+    into the themes <br>
+    - I chose to centre all of the page content to make it more readable and 
+    less "jammed"
+
+    
+
+<h2>Bugs:</h2>
+
+    - The prompt for clicking "Back" when the user does not cast the vote
+    will only prompt the user if they click this button. It will not prompt
+    if they select on another tab. It will not save the vote<br>
+    - For poll statistics, if you reset the poll votes, it will not display
+    any votes. it should show zero. This is because I think the default
+    value in the table is null. I ran out of time to fix this. <br>
+    </p>
+
+
+<form method="get" action="#/polls/">
+    <button type="submit" class="btn btn-default">Back</button>
+</form>

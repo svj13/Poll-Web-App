@@ -1,0 +1,26 @@
+<h2><span>Statistics for {{poll.Title}}</span></h2>
+
+<h3>{{poll.Body}}</h3>
+
+<table class="table">
+    <tr>
+        <th>Option</th>
+        <th>Number of Votes</th>
+    </tr>
+    <tr ng-repeat="option in options">
+        <td>{{option.Body}}</td>
+        <td>{{votes[$index].voteCount}}</td>
+       </tr>
+
+    
+</table>
+
+<form method="get" ng-click="deleteVotes()">
+    <button type="submit" class="btn btn-danger">Reset Voting Poll</button>
+</form>
+
+<form method="get" action="#/votes/">
+    <button type="submit" class="btn btn-default">Back</button>
+</form>
+
+
